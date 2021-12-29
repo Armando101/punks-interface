@@ -1,11 +1,13 @@
 import { Route } from "react-router-dom";
 import MainLayout from "./layouts/main";
 import Home from "./views/home";
+import Punks from "./views/punks";
 
 function App() {
   return (
     <MainLayout>
-      <Route path="/" component={Home} />
+      <Route path="/" exact component={Home} />
+      <Route path="/punks" exact component={Punks} />
     </MainLayout>
   );
 }
